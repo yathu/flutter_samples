@@ -22,6 +22,19 @@ class _RootPageState extends State<RootPage> {
   AuthStatus authStatus = AuthStatus.NOT_DETERMINED;
   String _userId = "";
 
+  @override
+  void initState() {
+    super.initState();
+    widget.auth.getCurrentUser().then((user) {
+      setState(() {
+        if (user != null) {
+          _userId = user?.uid;
+        }
+        authStatus = user?.uid == null ? AuthStatus.NOT_LOGGED_IN : AuthStatus.LOGGED_IN;
+      });
+    });
+  }
+
   void loginCallback() {
     widget.auth.getCurrentUser().then((user) {
       setState(() {
@@ -38,6 +51,15 @@ class _RootPageState extends State<RootPage> {
       authStatus = AuthStatus.NOT_LOGGED_IN;
       _userId = "";
     });
+  }
+
+  Widget buildWaitingScreen() {
+    return Scaffold(
+      body: Container(
+        alignment: Alignment.center,
+        child: CircularProgressIndicator(),
+      ),
+    );
   }
 
   @override
@@ -61,15 +83,6 @@ class _RootPageState extends State<RootPage> {
       default:
         return buildWaitingScreen();
     }
-  }
-
-  Widget buildWaitingScreen() {
-    return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        child: CircularProgressIndicator(),
-      ),
-    );
   }
 }
 
