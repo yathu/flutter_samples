@@ -1,30 +1,14 @@
-import 'package:firebase_provider_login/register.dart';
+
+
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:provider/provider.dart';
 
-void main() {
-  runApp(MaterialApp(
-    title: 'Flutter Demo',
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-    ),
-    initialRoute: '/',
-    routes: {
-      '/': (context) => LoginPage(),
-      '/register': (context) => RegisterPage(),
-    },
-  ));
-}
-
-class LoginPage extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login Screen"),
+        title: Text("Register Screen"),
       ),
       body: Center(
 
@@ -57,7 +41,7 @@ class LoginPage extends StatelessWidget {
                       child: RaisedButton(
                         color: Colors.teal,
                         padding: EdgeInsets.fromLTRB(50, 15, 50, 15),
-                        child: Text("Login"),
+                        child: Text("Register"),
                         onPressed: ()=>{},
                       ),
                     ),
@@ -65,12 +49,12 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text("not registered? "),
+                        Text("already registered? "),
                         new GestureDetector(
                           onTap: (){
-                            Navigator.pushNamed(context, '/register');
+                            Navigator.pop(context);
                           },
-                          child: Text("Create an account",style: TextStyle(color: Colors.green),),
+                          child: Text("Login",style: TextStyle(color: Colors.green),),
                         ),
                       ],
                     ),
@@ -84,5 +68,3 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
-
