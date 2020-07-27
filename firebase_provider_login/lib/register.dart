@@ -1,6 +1,7 @@
-
-
+import 'package:firebase_provider_login/services/authentication.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 class RegisterPage extends StatelessWidget {
 
@@ -42,7 +43,9 @@ class RegisterPage extends StatelessWidget {
                         color: Colors.teal,
                         padding: EdgeInsets.fromLTRB(50, 15, 50, 15),
                         child: Text("Register"),
-                        onPressed: ()=>{},
+                        onPressed: ()=>{
+                          callAuthentication(),
+                        },
                       ),
                     ),
                     Row(
@@ -66,5 +69,11 @@ class RegisterPage extends StatelessWidget {
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  void callAuthentication(){
+    Auth auth = new Auth();
+    var uid = auth.signUp("yathavancom@gmail.com", "123456");
+    debugPrint("uid: $uid");
   }
 }
