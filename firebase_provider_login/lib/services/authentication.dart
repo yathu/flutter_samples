@@ -10,10 +10,9 @@ class Auth implements BaseAuth {
 
   @override
   Future<String> signUp(String email, String password) async {
-    final AuthResult result = await _auth.createUserWithEmailAndPassword(
-        email: email, password: password);
-    FirebaseUser user = result.user;
-    debugPrint("f-user:"+user.toString());
+    final FirebaseUser user = (await _auth.createUserWithEmailAndPassword(
+        email: email, password: password)).user;
+    debugPrint("f-user:"+user.uid);
     return user.uid;
   }
 }
