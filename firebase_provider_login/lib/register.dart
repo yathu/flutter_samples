@@ -5,6 +5,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class RegisterPage extends StatelessWidget {
 
+  var emailController = TextEditingController();
+  var passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -27,6 +30,7 @@ class RegisterPage extends StatelessWidget {
                         decoration: InputDecoration(
                           hintText: ("Email"),
                         ),
+                        controller: emailController,
                       ),
                     ),
                     Padding(
@@ -35,6 +39,7 @@ class RegisterPage extends StatelessWidget {
                         decoration: InputDecoration(
                             hintText: "Password"
                         ),
+                        controller: passwordController,
                       ),
                     ),
                     Padding(
@@ -44,7 +49,7 @@ class RegisterPage extends StatelessWidget {
                         padding: EdgeInsets.fromLTRB(50, 15, 50, 15),
                         child: Text("Register"),
                         onPressed: ()=>{
-                          callAuthentication(),
+                          callAuthentication(context),
                         },
                       ),
                     ),
@@ -71,9 +76,24 @@ class RegisterPage extends StatelessWidget {
     );
   }
 
-  void callAuthentication(){
+  void callAuthentication(BuildContext context) async{
     Auth auth = new Auth();
-    var uid = auth.signUp("yathavancom@gmail.com", "123456");
+
+    //need to validate email
+    var email = emailController.text;
+    var password = passwordController.text;
+
+    String uid = await auth.signUp(email,password);
+
+    if (uid.length > 0 && uid != null) {
+      Navigator.pushNamed(context, '/home');
+    }else{
+      AlertDialog(
+        title: Text("ERROR"),
+        content: Text(uid.toString()),
+      );
+    }
+
     debugPrint("uid: $uid");
   }
 }

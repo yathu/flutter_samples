@@ -1,3 +1,4 @@
+import 'package:firebase_provider_login/Home.dart';
 import 'package:firebase_provider_login/register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -14,6 +15,7 @@ void main() {
     routes: {
       '/': (context) => LoginPage(),
       '/register': (context) => RegisterPage(),
+      '/home': (context) => HomePage(),
     },
   ));
 }
