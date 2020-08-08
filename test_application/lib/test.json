@@ -1,0 +1,127 @@
+{
+  "products": [
+    {
+      "id": 3607648,
+      "category": "Red Wine",
+      "name": "19 Crimes Pinot Noir 750mL",
+      "shortName": "Pinot Noir 750mL",
+      "brand": "19 Crimes",
+      "isAvailable": true,
+      "volumeMl": 750,
+      "ratings": {
+        "average": 0.0,
+        "total": 0
+      },
+      "promotion": null,
+      "price": {
+        "current": 18.99,
+        "normal": 18.99,
+        "acrossAnySix": 17.09
+      },
+      "stock": {
+        "delivery": "In Stock",
+        "clickAndCollect": ""
+      },
+      "image": {
+        "thumbnailImage": "/-/media/images/products/generic_winebottle.ashx?bc=white&h=240&mw=300&isThumbnail=True&productId=3607648",
+        "heroImage": "/-/media/images/products/generic_winebottle.ashx?h=520&productId=3607648",
+        "bundleHeroImage": null
+      },
+      "imageList": [
+        {
+          "thumbnailImage": "/-/media/images/products/generic_winebottle.ashx?bc=white&h=240&mw=300&isThumbnail=True&productId=3607648",
+          "heroImage": "/-/media/images/products/generic_winebottle.ashx?h=520&productId=3607648",
+          "bundleHeroImage": null
+        }
+      ],
+      "isBundle": false,
+      "packaging": "Bottle",
+      "unitOfMeasure": "ea",
+      "unitOfMeasureLabel": "750mL",
+      "cartLimit": 0,
+      "productUrl": "/red-wine/19-crimes-pinot-noir-750ml_3607648"
+    },
+    {
+      "id": 3186062,
+      "category": "Red Wine",
+      "name": "19 Crimes Shiraz 750mL",
+      "shortName": "Shiraz 750mL",
+      "brand": "19 Crimes",
+      "isAvailable": true,
+      "volumeMl": 750,
+      "ratings": {
+        "average": 0.0,
+        "total": 0
+      },
+      "promotion": null,
+      "price": {
+        "current": 10.99,
+        "normal": 10.99,
+        "acrossAnySix": 9.89
+      },
+      "stock": {
+        "delivery": "No Stock",
+        "clickAndCollect": ""
+      },
+      "image": {
+        "thumbnailImage": "/-/media/images/products/generic_winebottle.ashx?bc=white&h=240&mw=300&isThumbnail=True&productId=3186062",
+        "heroImage": "/-/media/images/products/generic_winebottle.ashx?h=520&productId=3186062",
+        "bundleHeroImage": null
+      },
+      "imageList": [
+        {
+          "thumbnailImage": "/-/media/images/products/generic_winebottle.ashx?bc=white&h=240&mw=300&isThumbnail=True&productId=3186062",
+          "heroImage": "/-/media/images/products/generic_winebottle.ashx?h=520&productId=3186062",
+          "bundleHeroImage": null
+        }
+      ],
+      "isBundle": false,
+      "packaging": "Bottle",
+      "unitOfMeasure": "ea",
+      "unitOfMeasureLabel": "750mL",
+      "cartLimit": 0,
+      "productUrl": "/red-wine/19-crimes-shiraz-750ml_3186062"
+    },
+    {
+      "id": 8758390,
+      "category": "Red Wine",
+      "name": "42 Degrees South Pinot Noir 750mL",
+      "shortName": "Pinot Noir 750mL",
+      "brand": "42 Degrees South",
+      "isAvailable": true,
+      "volumeMl": 750,
+      "ratings": {
+        "average": 4.0,
+        "total": 1
+      },
+      "promotion": null,
+      "price": {
+        "current": 26.67,
+        "normal": 26.67,
+        "acrossAnySix": 24.0
+      },
+      "stock": {
+        "delivery": "In Stock",
+        "clickAndCollect": ""
+      },
+      "image": {
+        "thumbnailImage": "/-/media/images/products/generic_winebottle.ashx?bc=white&h=240&mw=300&isThumbnail=True&productId=8758390",
+        "heroImage": "/-/media/images/products/generic_winebottle.ashx?h=520&productId=8758390",
+        "bundleHeroImage": null
+      },
+      "imageList": [
+        {
+          "thumbnailImage": "/-/media/images/products/generic_winebottle.ashx?bc=white&h=240&mw=300&isThumbnail=True&productId=8758390",
+          "heroImage": "/-/media/images/products/generic_winebottle.ashx?h=520&productId=8758390",
+          "bundleHeroImage": null
+        }
+      ],
+      "isBundle": false,
+      "packaging": "Bottle",
+      "unitOfMeasure": "ea",
+      "unitOfMeasureLabel": "750mL",
+      "cartLimit": 0,
+      "productUrl": "/red-wine/42-degrees-south-pinot-noir-750ml_8758390"
+    }
+  ]
+}
